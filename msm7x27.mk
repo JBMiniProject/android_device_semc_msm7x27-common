@@ -108,8 +108,9 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/semc/msm7x27-common/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/semc/msm7x27-common/prebuilt/xbin/remount:system/xbin/remount \
-    device/semc/msm7x27-common/prebuilt/bin=hciattach:system/bin/hciattach \
-    device/semc/msm7x27-common/prebuilt/app/AntHalService.apk:system/app/AntHalService.apk
+    device/semc/msm7x27-common/prebuilt/bin/hciattach:system/bin/hciattach \
+    device/semc/msm7x27-common/prebuilt/app/AntHalService.apk:system/app/AntHalService.apk \
+    device/semc/msm7x27-common/prebuilt/lib/libcamera.so:system/lib/libcamera.so
 
 # Keylayouts
 PRODUCT_COPY_FILES += \

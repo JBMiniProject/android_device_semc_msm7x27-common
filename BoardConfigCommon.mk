@@ -103,7 +103,7 @@ ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
 # HW
-BOARD_EGL_CFG := device/semc/msm7x27-common/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/semc/msm7x27-common/prebuilt/lib/egl/egl.cfg
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_LEGACY_QCOM := false
 TARGET_USES_GENLOCK := true
