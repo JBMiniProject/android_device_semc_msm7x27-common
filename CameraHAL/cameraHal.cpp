@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2012, Raviprasad V Mummidi
- * Adapted for Jellybean by Vassilis Tsogkas
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "CameraHAL"
+#define LOG_TAG "JBMPCameraHAL"
 
 #include <CameraHardwareInterface.h>
 #include <hardware/hardware.h>
@@ -75,7 +74,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
       version_minor: 0,
       id: CAMERA_HARDWARE_MODULE_ID,
       name: "Camera HAL for JB",
-      author: "Vassilis Tsogkas",
+      author: "JB Mini Project",
       methods: &camera_module_methods,
       dso: NULL,
       reserved: {0},
