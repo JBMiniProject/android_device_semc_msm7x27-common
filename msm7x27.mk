@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Sensors, etc...
+# Gps / Audio / Wifi / Sensors / Lights
 PRODUCT_PACKAGES += \
     gps.delta \
     sensors.msm7x27 \
     lights.msm7x27 \
     audio.a2dp.default \
-    libaudioutils
+    libaudioutils \
+    wlan_loader \
+    wlan_cu \
+    dhcpcd.conf
 
 # GPU
 PRODUCT_PACKAGES += \
@@ -36,6 +39,10 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm7x27
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.pmem.camera=4000000 \
+    debug.camcorder.disablemeta=1
 
 # Omx
 PRODUCT_PACKAGES += \
@@ -157,3 +164,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio.primary.msm7x27.so:system/lib/hw/audio.primary.msm7x27.so \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio_policy.msm7x27.so:system/lib/hw/audio_policy.msm7x27.so
+
