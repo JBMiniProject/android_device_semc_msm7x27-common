@@ -58,6 +58,8 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     screencap \
+    CMWallpapers \
+    FileManager \
     hostap \
     rzscontrol \
     rild \
@@ -77,6 +79,10 @@ PRODUCT_COPY_FILES += \
 # Compcache
 PRODUCT_COPY_FILES += \
         device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol
+
+# Bluetooth configuration files
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -164,4 +170,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio.primary.msm7x27.so:system/lib/hw/audio.primary.msm7x27.so \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio_policy.msm7x27.so:system/lib/hw/audio_policy.msm7x27.so
+
+# Dithering
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.use_dithering=1
 
