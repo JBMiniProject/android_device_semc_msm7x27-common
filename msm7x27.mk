@@ -60,6 +60,16 @@ PRODUCT_PACKAGES += \
     wlan_cu \
     dhcpcd.conf
 
+# OpenSSH
+ PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
 # Bugmailer
 PRODUCT_PACKAGES += send_bug
 PRODUCT_COPY_FILES += \
