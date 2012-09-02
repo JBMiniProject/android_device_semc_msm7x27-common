@@ -76,10 +76,6 @@ PRODUCT_COPY_FILES += \
         system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
         system/extras/bugmailer/send_bug:system/bin/send_bug
 
-# Compcache
-PRODUCT_COPY_FILES += \
-        device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
@@ -96,7 +92,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    device/semc/msm7x27-common/prebuilt/etc/permissions/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
+    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.smfmf.xml:system/etc/permissions/com.sonyericsson.smfmf.xml \
+    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.suquashi.xml:system/etc/permissions/com.sonyericsson.suquashi.xml
 
 # Config files
 PRODUCT_COPY_FILES += \
@@ -117,8 +116,73 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/semc/msm7x27-common/prebuilt/xbin/remount:system/xbin/remount \
     device/semc/msm7x27-common/prebuilt/bin/hciattach:system/bin/hciattach \
+    device/semc/msm7x27-common/prebuilt/bin/mm-venc-omx-test:system/bin/mm-venc-omx-test \
+    device/semc/msm7x27-common/prebuilt/bin/nvimport:system/bin/nvimport \
+    device/semc/msm7x27-common/prebuilt/bin/port-bridge:system/bin/port-bridge \
+    device/semc/msm7x27-common/prebuilt/bin/qmuxd:system/bin/qmuxd \
     device/semc/msm7x27-common/prebuilt/app/AntHalService.apk:system/app/AntHalService.apk \
-    device/semc/msm7x27-common/prebuilt/lib/libcamera.so:system/lib/libcamera.so
+    device/semc/msm7x27-common/prebuilt/bin/updatemiscta:system/bin/updatemiscta \
+    device/semc/msm7x27-common/prebuilt/lib/hw/hal_seport.default.so:system/lib/hw/hal_seport.default.so \
+    device/semc/msm7x27-common/prebuilt/lib/systemconnector/libuinputdevicejni.so:system/lib/systemconnector/libuinputdevicejni.so \
+    device/semc/msm7x27-common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
+    device/semc/msm7x27-common/prebuilt/lib/libanthal.so:system/lib/libanthal.so \
+    device/semc/msm7x27-common/prebuilt/lib/libauth.so:system/lib/libauth.so \
+    device/semc/msm7x27-common/prebuilt/lib/libcm.so:system/lib/libcm.so \
+    device/semc/msm7x27-common/prebuilt/lib/libcommondefs.so:system/lib/libcommondefs.so \
+    device/semc/msm7x27-common/prebuilt/lib/libdiag.so:system/lib/libdiag.so \
+    device/semc/msm7x27-common/prebuilt/lib/libdll.so:system/lib/libdll.so \
+    device/semc/msm7x27-common/prebuilt/lib/libdsm.so:system/lib/libdsm.so \
+    device/semc/msm7x27-common/prebuilt/lib/libdss.so:system/lib/libdss.so \
+    device/semc/msm7x27-common/prebuilt/lib/libfm_stack.so:system/lib/libfm_stack.so \
+    device/semc/msm7x27-common/prebuilt/lib/libgdsi_exp.so:system/lib/libgdsi_exp.so \
+    device/semc/msm7x27-common/prebuilt/lib/libgstk_exp.so:system/lib/libgstk_exp.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmiscta.so:system/lib/libmiscta.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmmgsdilib.so:system/lib/libmmgsdilib.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmmipl.so:system/lib/libmmipl.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
+    device/semc/msm7x27-common/prebuilt/lib/libnv.so:system/lib/libnv.so \
+    device/semc/msm7x27-common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
+    device/semc/msm7x27-common/prebuilt/lib/liboem_rapi.so:system/lib/liboem_rapi.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAacDec.so:system/lib/libOmxAacDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAacEnc.so:system/lib/libOmxAacEnc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAmrDec.so:system/lib/libOmxAmrDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAmrEnc.so:system/lib/libOmxAmrEnc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAmrRtpDec.so:system/lib/libOmxAmrRtpDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxEvrcDec.so:system/lib/libOmxEvrcDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxQcelp12Enc.so:system/lib/libOmxQcelp12Enc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxQcelpDec.so:system/lib/libOmxQcelpDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxWmvDec.so:system/lib/libOmxWmvDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/liboncrpc.so:system/lib/liboncrpc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libopencore_common.so:system/lib/libopencore_common.so \
+    device/semc/msm7x27-common/prebuilt/lib/libpbmlib.so:system/lib/libpbmlib.so \
+    device/semc/msm7x27-common/prebuilt/lib/libqmi.so:system/lib/libqmi.so \
+    device/semc/msm7x27-common/prebuilt/lib/libqueue.so:system/lib/libqueue.so \
+    device/semc/msm7x27-common/prebuilt/lib/libril.so:system/lib/libril.so \
+    device/semc/msm7x27-common/prebuilt/lib/libsemc_ril.so:system/lib/libsemc_ril.so \
+    device/semc/msm7x27-common/prebuilt/lib/libsystemconnector_hal_jni.so:system/lib/libsystemconnector_hal_jni.so \
+    device/semc/msm7x27-common/prebuilt/lib/libuim.so:system/lib/libuim.so \
+    device/semc/msm7x27-common/prebuilt/lib/libvdmfumo.so:system/lib/libvdmfumo.so \
+    device/semc/msm7x27-common/prebuilt/lib/libwms.so:system/lib/libwms.so \
+    device/semc/msm7x27-common/prebuilt/lib/libwmsts.so:system/lib/libwmsts.so \
+    device/semc/msm7x27-common/prebuilt/lib/libZiEngine.so:system/lib/libZiEngine.so
+
+# Firmwares
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fmc_init_1273.1.bts:system/etc/firmware/fmc_init_1273.1.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fmc_init_1273.2.bts:system/etc/firmware/fmc_init_1273.2.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fm_rx_init_1273.1.bts:system/etc/firmware/fm_rx_init_1273.1.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fm_rx_init_1273.2.bts:system/etc/firmware/fm_rx_init_1273.2.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fm_tx_init_1273.1.bts:system/etc/firmware/fm_tx_init_1273.1.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/fm_tx_init_1273.2.bts:system/etc/firmware/fm_tx_init_1273.2.bts \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/TIInit_7.2.31.bts:system/etc/firmware/TIInit_7.2.31.bts
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
@@ -143,6 +207,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/bin/a2sd:system/bin/a2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/05mountext:system/etc/init.d/05mountext \
+    device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol \
     device/semc/msm7x27-common/prebuilt/xbinzipalign:system/xbin/zipalign
 
 # Adreno 200 files
@@ -158,6 +223,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
     device/semc/msm7x27-common/prebuilt/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     device/semc/msm7x27-common/prebuilt/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
+    device/semc/msm7x27-common/prebuilt/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
 # Audio blobs from ICS
