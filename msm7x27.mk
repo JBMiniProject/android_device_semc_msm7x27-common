@@ -122,7 +122,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/AntHalService.apk:system/app/AntHalService.apk \
     device/semc/msm7x27-common/prebuilt/bin/updatemiscta:system/bin/updatemiscta \
     device/semc/msm7x27-common/prebuilt/lib/hw/hal_seport.default.so:system/lib/hw/hal_seport.default.so \
-    device/semc/msm7x27-common/prebuilt/lib/systemconnector/libuinputdevicejni.so:system/lib/systemconnector/libuinputdevicejni.so \
+    device/semc/msm7x27-common/prebuilt/lib/libsystemconnector/libuinputdevicejni.so:system/lib/libsystemconnector/libuinputdevicejni.so \
     device/semc/msm7x27-common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
     device/semc/msm7x27-common/prebuilt/lib/libanthal.so:system/lib/libanthal.so \
     device/semc/msm7x27-common/prebuilt/lib/libauth.so:system/lib/libauth.so \
