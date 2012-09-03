@@ -56,7 +56,7 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-TARGET_CUSTOM_BLUEDROID := $(TOP)/device/semc/msm7x27-common/bluedroid.c
+TARGET_CUSTOM_BLUEDROID := ../../../device/semc/msm7x27-common/bluedroid.c
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
@@ -139,7 +139,7 @@ TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Recovery
 TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := $(TOP)/device/semc/msm7x27-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x27-common/recovery/recovery_keys.c
 
 # A custom ota package maker for a device without a boot partition
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/msm7x27-common/releasetools/semc_ota_from_target_files
