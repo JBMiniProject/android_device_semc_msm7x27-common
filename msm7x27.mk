@@ -154,7 +154,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxMp3Dec.so:system/lib/libOmxMp3Dec.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
-    device/semc/msm7x27-common/prebuilt/lib/libOmxQcelp12Enc.so:system/lib/libOmxQcelp12Enc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxQcelp13Enc.so:system/lib/libOmxQcelp13Enc.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxQcelpDec.so:system/lib/libOmxQcelpDec.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxWmaDec.so:system/lib/libOmxWmaDec.so \
