@@ -207,7 +207,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/05mountext:system/etc/init.d/05mountext \
     device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol \
-    device/semc/msm7x27-common/prebuilt/xbinzipalign:system/xbin/zipalign
+    device/semc/msm7x27-common/prebuilt/xbin/zipalign:system/xbin/zipalign
 
 # Adreno 200 files
 PRODUCT_COPY_FILES += \
