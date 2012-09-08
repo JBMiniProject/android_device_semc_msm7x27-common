@@ -123,6 +123,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/bin/updatemiscta:system/bin/updatemiscta \
     device/semc/msm7x27-common/prebuilt/lib/hw/hal_seport.default.so:system/lib/hw/hal_seport.default.so \
     device/semc/msm7x27-common/prebuilt/lib/libsystemconnector/libuinputdevicejni.so:system/lib/libsystemconnector/libuinputdevicejni.so \
+    device/semc/msm7x27-common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so \
     device/semc/msm7x27-common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
     device/semc/msm7x27-common/prebuilt/lib/libanthal.so:system/lib/libanthal.so \
     device/semc/msm7x27-common/prebuilt/lib/libauth.so:system/lib/libauth.so \
@@ -232,6 +233,5 @@ PRODUCT_COPY_FILES += \
 
 # Build Prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.use_dithering=1 \
     persist.pmem.camera=4000000 \
     debug.camcorder.disablemeta=1
