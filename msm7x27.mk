@@ -230,8 +230,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio.primary.msm7x27.so:system/lib/hw/audio.primary.msm7x27.so \
     device/semc/msm7x27-common/prebuilt/lib/hw/audio_policy.msm7x27.so:system/lib/hw/audio_policy.msm7x27.so
-
-# Build Prop
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.pmem.camera=4000000 \
-    debug.camcorder.disablemeta=1
