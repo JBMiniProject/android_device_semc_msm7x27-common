@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += \
     dhcpcd.conf
 
 # OpenSSH
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     scp \
     sftp \
     ssh \
@@ -69,6 +69,15 @@ PRODUCT_PACKAGES += \
     sshd_config \
     ssh-keygen \
     start-ssh
+
+# FM Radio
+PRODUCT_PACKAGES += \
+    fmreceiverif \
+    com.ti.fm.fmreceiverif.xml \
+    libfm_stack \
+    libfmrx \
+    FmRxService \
+    Fmapplication
 
 # Bugmailer
 PRODUCT_PACKAGES += send_bug
