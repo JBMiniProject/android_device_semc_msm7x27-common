@@ -141,7 +141,6 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libdll.so:system/lib/libdll.so \
     device/semc/msm7x27-common/prebuilt/lib/libdsm.so:system/lib/libdsm.so \
     device/semc/msm7x27-common/prebuilt/lib/libdss.so:system/lib/libdss.so \
-    device/semc/msm7x27-common/prebuilt/lib/libfm_stack.so:system/lib/libfm_stack.so \
     device/semc/msm7x27-common/prebuilt/lib/libgsdi_exp.so:system/lib/libgsdi_exp.so \
     device/semc/msm7x27-common/prebuilt/lib/libgstk_exp.so:system/lib/libgstk_exp.so \
     device/semc/msm7x27-common/prebuilt/lib/libmiscta.so:system/lib/libmiscta.so \
