@@ -114,7 +114,6 @@ PRODUCT_COPY_FILES += \
 # Extra prebuilt binaries
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/framework/com.sonyericsson.suquashi.jar:system/framework/com.sonyericsson.suquashi.jar \
-    device/semc/msm7x27-common/prebuilt/app/Radio.apk:system/app/Radio.apk \
     device/semc/msm7x27-common/prebuilt/app/SystemConnector.apk:system/app/SystemConnector.apk \
     device/semc/msm7x27-common/prebuilt/framework/SemcSmfmf.jar:system/framework/SemcSmfmf.jar \
     device/semc/msm7x27-common/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
