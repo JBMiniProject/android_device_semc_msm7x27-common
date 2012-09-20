@@ -235,7 +235,7 @@ PRODUCT_COPY_FILES += \
 
 # OTA Update Center
 PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/app/OTAUpdater-1.0.2.apk:system/app/OTAUpdater-1.0.2.apk
+    device/semc/msm7x27-common/prebuilt/app/OTAUpdater.apk:system/app/OTAUpdater.apk
 
 # Audio blobs from ICS
 PRODUCT_COPY_FILES += \
