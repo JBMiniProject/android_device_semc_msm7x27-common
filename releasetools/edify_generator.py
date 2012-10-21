@@ -198,6 +198,10 @@ class EdifyGenerator(object):
     cmd = "delete(" + ",\0".join(['"%s"' % (i,) for i in file_list]) + ");"
     self.script.append(self._WordWrap(cmd))
 
+  def DeleteDir(self, folder):
+    """Delete all files in a folder."""
+    self.script.append('delete_recursive(%s);' % (folder))
+
   def ApplyPatch(self, srcfile, tgtfile, tgtsize, tgtsha1, *patchpairs):
     """Apply binary patches (in *patchpairs) to the given srcfile to
     produce tgtfile (which may be "-" to indicate overwriting the
@@ -211,6 +215,10 @@ class EdifyGenerator(object):
     cmd.append(');')
     cmd = "".join(cmd)
     self.script.append(self._WordWrap(cmd))
+
+  def RunCMD(self, param1, param2, param3, param4, param5, param6):
+    """Run a command with 5 parameter."""
+    self.script.append('run_program("%s", "%s", "%s", "%s", "%s", "%s");' % (param1, param2, param3, param4, param5, param6))
 
   def WriteRawImage(self, mount_point, fn):
     """Write the given package file into the partition for the given
