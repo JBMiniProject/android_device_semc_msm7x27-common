@@ -200,7 +200,7 @@ class EdifyGenerator(object):
 
   def DeleteDir(self, folder):
     """Delete all files in a folder."""
-    self.script.append('delete_recursive(%s);' % (folder))
+    self.script.append('delete_recursive("%s");' % (folder))
 
   def ApplyPatch(self, srcfile, tgtfile, tgtsize, tgtsha1, *patchpairs):
     """Apply binary patches (in *patchpairs) to the given srcfile to
