@@ -111,7 +111,6 @@ PRODUCT_COPY_FILES += \
 
 # Extra prebuilt binaries
 PRODUCT_COPY_FILES += \
-
     device/semc/msm7x27-common/prebuilt/app/Fmapplication.apk:system/app/Fmapplication.apk \
     device/semc/msm7x27-common/prebuilt/app/SystemConnector.apk:system/app/SystemConnector.apk \
     device/semc/msm7x27-common/prebuilt/framework/SemcSmfmf.jar:system/framework/SemcSmfmf.jar \
@@ -330,6 +329,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/bin/a2sd:system/bin/a2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/05mountext:system/etc/init.d/05mountext \
+    device/semc/msm7x27-common/prebuilt/etc/init.d/20link2sd:system/etc/init.d/20link2sd \
     device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol \
     device/semc/msm7x27-common/prebuilt/xbin/zipalign:system/xbin/zipalign
 
