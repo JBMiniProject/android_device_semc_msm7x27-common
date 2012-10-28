@@ -101,8 +101,8 @@ PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     device/semc/msm7x27-common/prebuilt/etc/permissions/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
-    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.smfmf.xml:system/etc/permissions/com.sonyericsson.smfmf.xml \
-    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.suquashi.xml:system/etc/permissions/com.sonyericsson.suquashi.xml
+    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.smfmf.xml:system/etc/permissions/com.sonyericsson.smfmf.xml
+
 
 # Config files
 PRODUCT_COPY_FILES += \
@@ -111,7 +111,7 @@ PRODUCT_COPY_FILES += \
 
 # Extra prebuilt binaries
 PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/framework/com.sonyericsson.suquashi.jar:system/framework/com.sonyericsson.suquashi.jar \
+
     device/semc/msm7x27-common/prebuilt/app/Fmapplication.apk:system/app/Fmapplication.apk \
     device/semc/msm7x27-common/prebuilt/app/SystemConnector.apk:system/app/SystemConnector.apk \
     device/semc/msm7x27-common/prebuilt/framework/SemcSmfmf.jar:system/framework/SemcSmfmf.jar \
@@ -178,8 +178,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libuim.so:system/lib/libuim.so \
     device/semc/msm7x27-common/prebuilt/lib/libvdmfumo.so:system/lib/libvdmfumo.so \
     device/semc/msm7x27-common/prebuilt/lib/libwms.so:system/lib/libwms.so \
-    device/semc/msm7x27-common/prebuilt/lib/libwmsts.so:system/lib/libwmsts.so \
-    device/semc/msm7x27-common/prebuilt/lib/libZiEngine.so:system/lib/libZiEngine.so
+    device/semc/msm7x27-common/prebuilt/lib/libwmsts.so:system/lib/libwmsts.so
 
 # Firmwares
 PRODUCT_COPY_FILES += \
@@ -196,6 +195,123 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/semc/msm7x27-common/prebuilt/usr/keylayout/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
     device/semc/msm7x27-common/prebuilt/usr/keylayout/systemconnector.kl:system/usr/keylayout/systemconnector.kl
+
+# SEMC keyboard
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/app/SuquashiInputMethod.apk:system/app/SuquashiInputMethod.apk \
+    device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.suquashi.xml:system/etc/permissions/com.sonyericsson.suquashi.xml \
+    device/semc/msm7x27-common/prebuilt/framework/com.sonyericsson.suquashi.jar:system/framework/com.sonyericsson.suquashi.jar \
+    device/semc/msm7x27-common/prebuilt/lib/libZiEngine.so:system/lib/libZiEngine.so \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ara.xml:system/usr/keyboard-config/languages/ara.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/bos.xml:system/usr/keyboard-config/languages/bod.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/bul.xml:system/usr/keyboard-config/languages/bul.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/cat.xml:system/usr/keyboard-config/languages/cat.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ces.xml:system/usr/keyboard-config/languages/ces.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/dan.xml:system/usr/keyboard-config/languages/dan.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/deu.xml:system/usr/keyboard-config/languages/deu.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ell.xml:system/usr/keyboard-config/languages/ell.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/eng_us.xml:system/usr/keyboard-config/languages/eng_us.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/eng.xml:system/usr/keyboard-config/languages/eng.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/est.xml:system/usr/keyboard-config/languages/est.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/eus.xml:system/usr/keyboard-config/languages/eus.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/fas.xml:system/usr/keyboard-config/languages/fas.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/fin.xml:system/usr/keyboard-config/languages/fin.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/fra_ca.xml:system/usr/keyboard-config/languages/fra_ca.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/fra.xml:system/usr/keyboard-config/languages/fra.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/glg.xml:system/usr/keyboard-config/languages/glg.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/heb.xml:system/usr/keyboard-config/languages/heb.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/hrv.xml:system/usr/keyboard-config/languages/hrv.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/hun.xml:system/usr/keyboard-config/languages/hun.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ind.xml:system/usr/keyboard-config/languages/ind.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/isl.xml:system/usr/keyboard-config/languages/isl.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ita.xml:system/usr/keyboard-config/languages/ita.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/jav.xml:system/usr/keyboard-config/languages/jav.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/kaz.xml:system/usr/keyboard-config/languages/kaz.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/lav.xml:system/usr/keyboard-config/languages/lav.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/lit.xml:system/usr/keyboard-config/languages/lit.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/msa.xml:system/usr/keyboard-config/languages/msa.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/nld.xml:system/usr/keyboard-config/languages/nld.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/nor.xml:system/usr/keyboard-config/languages/nor.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/numberDecimal.xml:system/usr/keyboard-config/languages/numberDecimal.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/numberInteger.xml:system/usr/keyboard-config/languages/numberInteger.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/numberNatural.xml:system/usr/keyboard-config/languages/numberNatural.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/phone.xml:system/usr/keyboard-config/languages/phone.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/pol.xml:system/usr/keyboard-config/languages/pol.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/por_br.xml:system/usr/keyboard-config/languages/por_br.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/por.xml:system/usr/keyboard-config/languages/por.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ron.xml:system/usr/keyboard-config/languages/ron.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/rus.xml:system/usr/keyboard-config/languages/rus.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/slk.xml:system/usr/keyboard-config/languages/slk.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/slv.xml:system/usr/keyboard-config/languages/slv.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/spa_la.xml:system/usr/keyboard-config/languages/spa_la.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/spa.xml:system/usr/keyboard-config/languages/spa.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/sqi.xml:system/usr/keyboard-config/languages/sqi.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/srp.xml:system/usr/keyboard-config/languages/srp.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/sun.xml:system/usr/keyboard-config/languages/sun.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/swe.xml:system/usr/keyboard-config/languages/swe.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/tgl.xml:system/usr/keyboard-config/languages/tgl.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/tur.xml:system/usr/keyboard-config/languages/tur.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/languages/ukr.xml:system/usr/keyboard-config/languages/ukr.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/arabic.xml:system/usr/keyboard-config/layouts/arabic.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/azerty.xml:system/usr/keyboard-config/layouts/azerty.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/cyrillic.xml:system/usr/keyboard-config/layouts/cyrillic.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/greek.xml:system/usr/keyboard-config/layouts/greek.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/hebrew.xml:system/usr/keyboard-config/layouts/hebrew.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-arabic-azerty.xml:system/usr/keyboard-config/layouts/latin-on-arabic-azerty.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-arabic.xml:system/usr/keyboard-config/layouts/latin-on-arabic.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-bopomofo.xml:system/usr/keyboard-config/layouts/latin-on-bopomofo.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-cyrillic.xml:system/usr/keyboard-config/layouts/latin-on-cyrillic.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-greek.xml:system/usr/keyboard-config/layouts/latin-on-greek.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-hebrew.xml:system/usr/keyboard-config/layouts/latin-on-hebrew.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-korean.xml:system/usr/keyboard-config/layouts/latin-on-korean.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-pinyin.xml:system/usr/keyboard-config/layouts/latin-on-pinyin.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/latin-on-thai.xml:system/usr/keyboard-config/layouts/latin-on-thai.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/qwertz.xml:system/usr/keyboard-config/layouts/qwertz.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/qwerty-br.xml:system/usr/keyboard-config/layouts/qwerty-br.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/qwerty-en.xml:system/usr/keyboard-config/layouts/qwerty-en.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/qwerty-no-dk.xml:system/usr/keyboard-config/layouts/qwerty-no-dk.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/layouts/qwerty-se-fi.xml:system/usr/keyboard-config/layouts/qwerty-se-fi.xml \
+    device/semc/msm7x27-common/prebuilt/usr/keyboard-config/keyprint.xml:system/usr/keyboard-config/keyprint.xml \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Arabic/Zi8DatARs.z8d:system/usr/zi/Arabic/Zi8DatARs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Basque/Zi8DatEUs.z8d:system/usr/zi/Basque/Zi8DatEUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Bulgarian/Zi8DatBGs.z8d:system/usr/zi/Bulgarian/Zi8DatBGs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Catalan/Zi8DatCAs.z8d:system/usr/zi/Catalan/Zi8DatCAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Croatian/Zi8DatHRs.z8d:system/usr/zi/Croatian/Zi8DatHRs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Czech/Zi8DatCSs.z8d:system/usr/zi/Czech/Zi8DatCSs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Danish/Zi8DatDAs.z8d:system/usr/zi/Danish/Zi8DatDAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Dutch/Zi8DatNLs.z8d:system/usr/zi/Dutch/Zi8DatNLs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/English_AM/Zi8DatENAMs.z8d:system/usr/zi/English_AM/Zi8DatENAMs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/English_UK/Zi8DatENUKs.z8d:system/usr/zi/English_UK/Zi8DatENUKs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Estonian/Zi8DatETs.z8d:system/usr/zi/Estonian/Zi8DatETs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Farsi/Zi8DatFAs.z8d:system/usr/zi/Farsi/Zi8DatFAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Finnish/Zi8DatFIs.z8d:system/usr/zi/Finnish/Zi8DatFIs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/French_CA/Zi8DatFRCAs.z8d:system/usr/zi/French_CA/Zi8DatFRCAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/French_EU/Zi8DatFREUs.z8d:system/usr/zi/French_EU/Zi8DatFREUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Galician/Zi8DatGLs.z8d:system/usr/zi/Galician/Zi8DatGLs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/German/Zi8DatDEs.z8d:system/usr/zi/German/Zi8DatDEs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Greek/Zi8DatELs.z8d:system/usr/zi/Greek/Zi8DatELs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Hebrew/Zi8DatIWs.z8d:system/usr/zi/Hebrew/Zi8DatIWs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Hungarian/Zi8DatHUs.z8d:system/usr/zi/Hungarian/Zi8DatHUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Indonesian/Zi8DatINs.z8d:system/usr/zi/Indonesian/Zi8DatINs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Italian/Zi8DatITs.z8d:system/usr/zi/Italian/Zi8DatITs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Latvian/Zi8DatLVs.z8d:system/usr/zi/Latvian/Zi8DatLVs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Lithuanian/Zi8DatLTs.z8d:system/usr/zi/Lithuanian/Zi8DatLTs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Malay/Zi8DatMSs.z8d:system/usr/zi/Malay/Zi8DatMSs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Norwegian/Zi8DatNOs.z8d:system/usr/zi/Norwegian/Zi8DatNOs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Polish/Zi8DatPLs.z8d:system/usr/zi/Polish/Zi8DatPLs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Portuguese_BZ/Zi8DatPTBZs.z8d:system/usr/zi/Portuguese_BZ/Zi8DatPTBZs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Portuguese_EU/Zi8DatPTEUs.z8d:system/usr/zi/Portuguese_EU/Zi8DatPTEUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Romanian/Zi8DatROs.z8d:system/usr/zi/Romanian/Zi8DatROs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Russian/Zi8DatRUs.z8d:system/usr/zi/Russian/Zi8DatRUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Serbian/Zi8DatSRLAs.z8d:system/usr/zi/Serbian/Zi8DatSRLAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Slovak/Zi8DatSKs.z8d:system/usr/zi/Slovak/Zi8DatSKs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Slovenian/Zi8DatSLs.z8d:system/usr/zi/Slovenian/Zi8DatSLs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Spanish_EU/Zi8DatESEUs.z8d:system/usr/zi/Spanish_EU/Zi8DatESEUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Spanish_SA/Zi8DatESSAs.z8d:system/usr/zi/Spanish_SA/Zi8DatESSAs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Swedish/Zi8DatSVs.z8d:system/usr/zi/Swedish/Zi8DatSVs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Tagalog/Zi8DatTLs.z8d:system/usr/zi/Tagalog/Zi8DatTLs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Turkish/Zi8DatTRs.z8d:system/usr/zi/Turkish/Zi8DatTRs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Ukrainian/Zi8DatUKs.z8d:system/usr/zi/Ukrainian/Zi8DatUKs.z8d
 
 # Wifi and hotspot
 PRODUCT_COPY_FILES += \
