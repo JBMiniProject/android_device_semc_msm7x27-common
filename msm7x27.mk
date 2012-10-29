@@ -301,7 +301,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/usr/zi/Portuguese_BZ/Zi8DatPTBZs.z8d:system/usr/zi/Portuguese_BZ/Zi8DatPTBZs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Portuguese_EU/Zi8DatPTEUs.z8d:system/usr/zi/Portuguese_EU/Zi8DatPTEUs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Romanian/Zi8DatROs.z8d:system/usr/zi/Romanian/Zi8DatROs.z8d \
-    device/semc/msm7x27-common/prebuilt/usr/zi/Russian/Zi8DatRUs.z8d:system/usr/zi/Russian/Zi8DatRUs.z8d \
+    device/semc/msm7x27-common/prebuilt/usr/zi/Russian/Zi8DatRU.z8d:system/usr/zi/Russian/Zi8DatRU.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Serbian/Zi8DatSRLAs.z8d:system/usr/zi/Serbian/Zi8DatSRLAs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Slovak/Zi8DatSKs.z8d:system/usr/zi/Slovak/Zi8DatSKs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Slovenian/Zi8DatSLs.z8d:system/usr/zi/Slovenian/Zi8DatSLs.z8d \
