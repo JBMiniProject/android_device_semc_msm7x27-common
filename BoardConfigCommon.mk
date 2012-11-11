@@ -140,11 +140,31 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Recovery
-TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x27-common/recovery/recovery_keys.c
+# TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
+# BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x27-common/recovery/recovery_keys.c
 
 # A custom ota package maker for a device without a boot partition
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/msm7x27-common/releasetools/semc_ota_from_target_files
 
 # Prelinks
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/msm7x27-common/prelink-linux-arm-msm7x27.map
+
+#twrp
+DEVICE_RESOLUTION := 320x480
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_GUI := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_CUSTOM_POWER_BUTTON := 107
+BOARD_HAS_NO_REAL_SDCARD := false
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_FLASH_FROM_STORAGE := true
+TW_HAS_DOWNLOAD_MODE := false
+TW_HAS_NO_RECOVERY_PARTITION := true
+TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_JB_CRYPTO := false
+TW_NEVER_UNMOUNT_SYSTEM := false
+TW_NO_BATT_PERCENT := false
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NO_USB_STORAGE := false
+TW_SDEXT_NO_EXT4 := false

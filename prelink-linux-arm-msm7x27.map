@@ -216,3 +216,8 @@ libstlport.so           0x9D100000 # [~3M] for external/stlport
 libzxing.so             0x9D000000 # [<64K] for goggles
 libinterstitial.so      0x9CF00000 # [<64K] for goggles
 liblept.so              0x9CA00000 # [~5M] for external/leptonica
+
+libmmcutils.so 			0x9C500000 # [<64K]
+libbmlutils.so 			0x9C400000 # [<64K]
+libflashutils.so 		0x9C300000 # [<64K]
+libmincrypt.so 			0x9C200000 # [<64K]
