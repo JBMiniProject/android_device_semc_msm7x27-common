@@ -120,13 +120,13 @@ class EdifyGenerator(object):
     """Update the progress bar, advancing it over 'frac' over the next
     'dur' seconds.  'dur' may be zero to advance it via SetProgress
     commands instead of by time."""
-    self.script.append("show_progress(%f, %d);" % (frac, int(dur)))
+    self.script.append("show_progress(%d, %d);" % (frac, int(dur)))
 
   def SetProgress(self, frac):
     """Set the position of the progress bar within the chunk defined
     by the most recent ShowProgress call.  'frac' should be in
     [0,1]."""
-    self.script.append("set_progress(%f);" % (frac,))
+    self.script.append("set_progress(%d);" % (frac,))
 
   def PatchCheck(self, filename, *sha1):
     """Check that the given file (or MTD reference) has one of the

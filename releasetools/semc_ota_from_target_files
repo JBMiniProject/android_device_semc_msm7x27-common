@@ -404,7 +404,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("                                ")
   script.Print("                                ")
 
-  script.ShowProgress(0.5, 0)
+  script.ShowProgress(50, 1)
 
   script.Mount("/system")
   script.RunBackup("backup")
@@ -429,9 +429,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("-> Set permissions <-")
   Item.Get("system").SetPermissions(script)
 
-  script.ShowProgress(0.2, 10)
   script.RunBackup("restore")
-  script.ShowProgress(0.1, 0)
 
   device_specific.FullOTA_InstallEnd()
 
