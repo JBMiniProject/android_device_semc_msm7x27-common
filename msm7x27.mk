@@ -76,7 +76,8 @@ PRODUCT_PACKAGES += \
     fmreceiverif \
     com.ti.fm.fmreceiverif.xml \
     libfmrx \
-    FmRxService
+    FmRxService \
+    Fmapplication
 
 # Bugmailer
 PRODUCT_PACKAGES += send_bug
@@ -112,7 +113,6 @@ PRODUCT_COPY_FILES += \
 
 # Extra prebuilt binaries
 PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/app/Fmapplication.apk:system/app/Fmapplication.apk \
     device/semc/msm7x27-common/prebuilt/app/SystemConnector.apk:system/app/SystemConnector.apk \
     device/semc/msm7x27-common/prebuilt/framework/SemcSmfmf.jar:system/framework/SemcSmfmf.jar \
     device/semc/msm7x27-common/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
