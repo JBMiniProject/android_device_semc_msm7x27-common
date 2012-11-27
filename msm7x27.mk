@@ -145,6 +145,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libgstk_exp.so:system/lib/libgstk_exp.so \
     device/semc/msm7x27-common/prebuilt/lib/libmiscta.so:system/lib/libmiscta.so \
     device/semc/msm7x27-common/prebuilt/lib/libmm-adspsvc.so:system/lib/libmm-adspsvc.so \
+    device/semc/msm7x27-common/prebuilt/lib/libmm-omxcore.so:system/lib/libmm-omxcore.so \
     device/semc/msm7x27-common/prebuilt/lib/libmmgsdilib.so:system/lib/libmmgsdilib.so \
     device/semc/msm7x27-common/prebuilt/lib/libmmipl.so:system/lib/libmmipl.so \
     device/semc/msm7x27-common/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
@@ -157,6 +158,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/lib/libOmxAmrEnc.so:system/lib/libOmxAmrEnc.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxAmrRtpDec.so:system/lib/libOmxAmrRtpDec.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxAmrwbDec.so:system/lib/libOmxAmrwbDec.so \
+    device/semc/msm7x27-common/prebuilt/lib/libOmxCore.so:system/lib/libOmxCore.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxEvrcDec.so:system/lib/libOmxEvrcDec.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxEvrcEnc.so:system/lib/libOmxEvrcEnc.so \
     device/semc/msm7x27-common/prebuilt/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
