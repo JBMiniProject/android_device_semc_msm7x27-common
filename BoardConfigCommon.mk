@@ -26,7 +26,7 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/semc/msm7x27-common/include
 
-# Camera
+## Camera
 USE_CAMERA_STUB := true
 BOARD_USES_ECLAIR_LIBCAMERA := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
@@ -34,7 +34,7 @@ BUILD_CAMERAHAL := true
 TARGET_DISABLE_ARM_PIE := true
 BOARD_CPU_COLOR_CONVERT := true
 
-# ARMv6-compatible processor rev 5 (v6l)
+## ARMv6-compatible processor rev 5 (v6l)
 TARGET_BOARD_PLATFORM := msm7x27
 TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_CPU_ABI := armeabi-v6l
@@ -48,21 +48,21 @@ TARGET_USE_SOFTWARE_AUDIO_AAC := true
 COPYBIT_MSM7K := true
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 
-# GPS
+## GPS
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 1240
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := delta
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
-# Bluetooth
+## Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 TARGET_CUSTOM_BLUEDROID := ../../../device/semc/msm7x27-common/bluedroid.c
 
-# Lights
+## Lights
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# Wifi
+## Wifi
 BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
 BOARD_WLAN_DEVICE := wl1271
 BOARD_SOFTAP_DEVICE := wl1271
@@ -77,11 +77,11 @@ WIFI_AP_DRIVER_MODULE_NAME := tiap_drv
 WIFI_AP_FIRMWARE_LOADER := wlan_ap_loader
 PRODUCT_DEFAULT_WIFI_CHANNELS := 14
 
-# USB
+## USB
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
-# CFLAGS
+## CFLAGS
 COMMON_GLOBAL_CFLAGS += -DTARGET_MSM7x27
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
@@ -93,18 +93,18 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
 COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS
 COMMON_GLOBAL_CFLAGS += -DQCOM_LEGACY_OMX
 
-# JIT
+## JIT
 WITH_JIT := true
 ENABLE_JSC_JIT:= true
 ARCH_ARM_HAVE_VFP := true
 
-# Browser
+## Browser
 JS_ENGINE := v8
 HTTP := chrome
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
-# HW
+## HW
 BOARD_EGL_CFG := device/semc/msm7x27-common/prebuilt/lib/egl/egl.cfg
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_LEGACY_QCOM := false
@@ -117,7 +117,7 @@ BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 BOARD_USE_SKIA_LCDTEXT := true
 TARGET_NO_HW_VSYNC := true
 
-# Kernel
+## Kernel
 BOARD_KERNEL_CMDLINE := console=null
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 0x00000800
@@ -126,30 +126,26 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 BOARD_CUSTOM_BOOTIMG_MK := device/semc/msm7x27-common/custombootimg.mk
 
-# Audio
+## Audio
 TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USES_GENERIC_AUDIO := false
-BOARD_COMBO_DEVICE_SUPPORTED := true
+BOARD_COMBO_DEVICE_SUPPORTED := false
 BOARD_USES_AUDIO_LEGACY := false
 
-# Odex
+## ODEX
 WITH_DEXPREOPT := false
 
-# Bootanimation
+## Bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_USE_RGB565 := true
 
-# Recovery
-# TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
-# BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x27-common/recovery/recovery_keys.c
-
-# A custom ota package maker for a device without a boot partition
+## OTA package maker
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/msm7x27-common/releasetools/semc_ota_from_target_files
 
-# Prelinks
+## Prelinks
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/msm7x27-common/prelink-linux-arm-msm7x27.map
 
-#twrp
+## TWRP
 DEVICE_RESOLUTION := 320x480
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_GUI := true
