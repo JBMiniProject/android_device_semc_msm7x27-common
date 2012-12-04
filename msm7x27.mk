@@ -45,8 +45,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw \
-    libopencorehw
+    libstagefrighthw
 
 # Extra packages
 PRODUCT_PACKAGES += \
