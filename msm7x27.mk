@@ -330,9 +330,7 @@ PRODUCT_COPY_FILES += \
 # A2SD and extra init files
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/bin/a2sd:system/bin/a2sd \
-    device/semc/msm7x27-common/prebuilt/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     device/semc/msm7x27-common/prebuilt/etc/init.d/05mountext:system/etc/init.d/05mountext \
-    device/semc/msm7x27-common/prebuilt/etc/init.d/06swap:system/etc/init.d/06swap \
     device/semc/msm7x27-common/prebuilt/etc/init.d/10apps2sd:system/etc/init.d/10apps2sd \
     device/semc/msm7x27-common/prebuilt/etc/init.d/20link2sd:system/etc/init.d/20link2sd \
     device/semc/msm7x27-common/prebuilt/xbin/rzscontrol:system/xbin/rzscontrol \
