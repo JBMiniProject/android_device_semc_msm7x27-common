@@ -1,7 +1,0 @@
-#!/system/bin/sh
-#
-# read and set values from sysctl.conf
-
-if [ -e /system/etc/sysctl.conf ]; then
-    sysctl -p
-fi

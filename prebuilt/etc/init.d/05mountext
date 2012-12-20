@@ -1,63 +1,73 @@
 #!/system/bin/sh
 #
 # mount ext partition from sd card
-#
-# Andrew Sutherland - (20121003)
-#
-# Adapted for JB Mini Project by Daveee10 @ xda
+# Revised 20111220 by Andrew Sutherland for apps2sd on Evervolv ICS
+# Adapted for MiniCM by nobodyAtall @ xda
 
-BB=/system/xbin/busybox
-E2FSCK=/system/bin/e2fsck
-TUNE2FS=/system/bin/tune2fs
-logI="log -p i -t mountext"
-logE="log -p e -t mountext"
-
-if [ -z "$SD_EXT_DIRECTORY" ]; then SD_EXT_DIRECTORY=/sd-ext; fi
+SD_EXT_DIRECTORY=/sd-ext;
+BB="/system/xbin/busybox";
+FDISK="$BB fdisk -l";
+E2FSCK="/system/bin/e2fsck";
 
 # find SD Card
-for MMC_NUM in $(seq 0 9); do
-    if [ ! -e /sys/block/mmcblk${MMC_NUM}/device/type ]; then continue; fi
-    MMC_TYPE=$(cat /sys/block/mmcblk${MMC_NUM}/device/type)
-    if [ "$MMC_TYPE" = "SD" ]; then
-        # 2nd partition will be used for /sd-ext
+for MMC_NUM in `seq 0 9`;
+do
+    MMC_TYPE=`cat /sys/block/mmcblk${MMC_NUM}/device/type`
+    if [ "$MMC_TYPE" = "SD" ];
+    then
+        # 2nd partition of sdcard should be the sd-ext if it exists
         SD_EXT_PART=/dev/block/mmcblk${MMC_NUM}p2
+        # Find the linux and swap partitions (if they exist)
+        #SD_EXT_PART=`$FDISK /dev/block/mmcblk${MMC_NUM} | awk '/^\// && $5 == 83 {print $1;exit;}'`;
+        SWAP_PART=`$FDISK /dev/block/mmcblk${MMC_NUM} | awk '/^\/.* 82 Linux swap/ {print $1;exit;}'`;
         setprop ev.sdextpart $SD_EXT_PART
-        break
-    fi
+        break;
+    fi;
 done
-
-# make sure partition exists
-if [ ! -b "$SD_EXT_PART" ]; then exit; fi
-# make sure uts not already mounted (ie via init.rc)
-if ! awk -vBLK="$SD_EXT_PART" '$1 == BLK { exit 1; }' /proc/mounts; then exit; fi
-
-# Check for errors
-if [ -x "$E2FSCK" ]; then
-    if [ "$(getprop persist.a2sd.forcecheck)" = "true" ]; then
-        $E2FSCK -fy $SD_EXT_PART
-        setprop persist.a2sd.forcecheck done
+# mount sdcard if a valid partition was found
+if [ -b "$SD_EXT_PART" ];
+then
+    log -p i -t mountext "Checking $SD_EXT_PART for errors...";
+    # fsck the sd-ext filesystem first
+    if [ -x "$E2FSCK" ];
+    then
+        $E2FSCK -y $SD_EXT_PART;
+        e2fsk_exitcode=$?;
     else
-        $E2FSCK -p $SD_EXT_PART
-    fi
-    e2fsk_exitcode=$?
+        log -p i -t mountext "executable e2fsck not found, assuming no filesystem errors";
+        e2fsk_exitcode=0;
+    fi;
+    # set property with exit code in case an error occurs
+    setprop ev.e2fsck.errors $e2fsk_exitcode;
+    if [ "$e2fsk_exitcode" -lt 2 ];
+    then
+        # mount and set perms
+        # it is ok to mount ext[3/4] partitions as ext4
+        $BB mount -t ext4 -o data=ordered,commit=15,barrier=1,nouser_xattr,errors=continue,noatime,nodiratime,nosuid,nodev $SD_EXT_PART $SD_EXT_DIRECTORY;
+        if [ "$?" = 0 ];
+        then
+            $BB chown 1000:1000 $SD_EXT_DIRECTORY;
+            $BB chmod 771 $SD_EXT_DIRECTORY;
+            log -p i -t mountext "$SD_EXT_DIRECTORY successfully mounted";
+        else
+            log -p e -t mountext "Unable to mount filesystem for $SD_EXT_DIRECTORY!";
+        fi;
+    else
+        log -p e -t mountext "e2fsck returned error $e2fsk_exitcode";
+        log -p e -t mountext "Unable to repair ext partition...not mounting";
+    fi;
 else
-    e2fsk_exitcode=0
-fi
-
-# Sdcard tweak: remove journal if present
-if [ -x "$TUNE2FS" ]; then
-    if [ "$($TUNE2FS -l $SD_EXT_PART | $BB grep -o has_journal)" ]; then
-        $TUNE2FS -O ^has_journal $SD_EXT_PART >/dev/null
-    fi
-fi
-
-# Mount: options tuned for sdcards
-if [ $e2fsk_exitcode -le 2 ]; then
-    $BB mount -t ext4 -o defaults,data=writeback,nobh,noatime,nodiratime,noauto_da_alloc $SD_EXT_PART $SD_EXT_DIRECTORY
-fi
-
-# Disable /data encryption on yaffs
-DATA_FS_TYPE=$($BB awk -vDIR="/data" '$2 == DIR { print $3; exit; }' /proc/mounts)
-if [ "$DATA_FS_TYPE" = "yaffs2" ]; then
-    setprop ro.crypto.state unsupported
-fi
+    log -p e -t mountext "linux partition not found on sdcard";
+fi;
+# enable swap
+if [ "$SWAP_PART" = "" ];
+then
+    setprop ev.swap 0;
+    setprop ev.swappart "none";
+    log -p i -t mountext "No swap partition found.";
+else
+    $BB swapon $SWAP_PART;
+    setprop ev.swap 1;
+    setprop ev.swappart $SWAP_PART;
+    log -p i -t mountext "Swap enabled on $SWAP_PART";
+fi;
