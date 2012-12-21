@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudioutils
 
+# PowerHAL
+PRODUCT_PACKAGES += \
+    power.msm7x27
+
 # GPU
 PRODUCT_PACKAGES += \
     gralloc.default \
