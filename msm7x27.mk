@@ -18,6 +18,8 @@ PRODUCT_PACKAGES += \
     sensors.msm7x27 \
     lights.msm7x27 \
     audio.a2dp.default \
+    audio.primary.msm7x27 \
+    audio_policy.msm7x27 \
     audio.usb.default \
     libaudioutils
 
@@ -359,8 +361,3 @@ PRODUCT_COPY_FILES += \
 # OTA Update Center
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/OTAUpdater.apk:system/app/OTAUpdater.apk
-
-# Audio blobs from ICS
-PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/lib/hw/audio.primary.msm7x27.so:system/lib/hw/audio.primary.msm7x27.so \
-    device/semc/msm7x27-common/prebuilt/lib/hw/audio_policy.msm7x27.so:system/lib/hw/audio_policy.msm7x27.so
