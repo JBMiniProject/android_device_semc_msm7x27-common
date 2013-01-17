@@ -358,6 +358,15 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/01_qcomm_omx.cfg:system/etc/01_qcomm_omx.cfg \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
+# SRS Audio
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/app/PlayMusic.apk:system/app/PlayMusic.apk \
+    device/semc/msm7x27-common/prebuilt/app/SRSPanel.apk:system/app/SRSPanel.apk \
+    device/semc/msm7x27-common/prebuilt/etc/audio_effects.conf:system/etc/audio_effects.conf \
+    device/semc/msm7x27-common/prebuilt/etc/SRSAudioFilter.csv:system/etc/SRSAudioFilter.csv \
+    device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrsfx.so:system/lib/soundfx/libsrsfx.so \
+    device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrstb.so:system/lib/soundfx/libsrstb.so
+
 # OTA Update Center
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/OTAUpdater.apk:system/app/OTAUpdater.apk
