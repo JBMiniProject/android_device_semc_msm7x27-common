@@ -4,6 +4,11 @@ echo 2400 > $dev/voltage_mv
 
 # lm3530 LMU configuration
 dev=/sys/devices/platform/i2c-adapter/i2c-0/0-0036
+if [ ! -f $dev ];
+then
+    dev=/sys/devices/i2c-0/0-0036
+fi
+
 echo linear > $dev/br::mapping  # linear exp
 echo 32768 > $dev/br::rate::up   # 8, 1024, 2048, 4096, 8192, 16384, 32768, 65538
 echo 32768 > $dev/br::rate::down # 8, 1024, 2048, 4096, 8192, 16384, 32768, 65538
