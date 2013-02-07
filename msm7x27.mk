@@ -126,7 +126,6 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     device/semc/msm7x27-common/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
     device/semc/msm7x27-common/prebuilt/xbin/remount:system/xbin/remount \
-    device/semc/msm7x27-common/prebuilt/bin/hciattach:system/bin/hciattach \
     device/semc/msm7x27-common/prebuilt/bin/mm-venc-omx-test:system/bin/mm-venc-omx-test \
     device/semc/msm7x27-common/prebuilt/bin/nvimport:system/bin/nvimport \
     device/semc/msm7x27-common/prebuilt/bin/port-bridge:system/bin/port-bridge \
