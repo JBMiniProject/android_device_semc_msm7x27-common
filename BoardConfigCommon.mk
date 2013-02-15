@@ -148,6 +148,10 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/semc/msm7x27-common/releaset
 ## Prelinks
 PRODUCT_SPECIFIC_DEFINES += TARGET_PRELINKER_MAP=$(TOP)/device/semc/msm7x27-common/prelink-linux-arm-msm7x27.map
 
+## CWM
+TARGET_RECOVERY_PRE_COMMAND := "touch /cache/recovery/boot;sync;"
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/semc/msm7x27-common/recovery/recovery_keys.c
+
 ## TWRP
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_GUI := true
