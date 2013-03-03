@@ -56,15 +56,11 @@ PRODUCT_PACKAGES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     screencap \
-    hostap \
     rzscontrol \
     rild \
     com.android.future.usb.accessory \
     make_ext4fs \
-    setup_fs \
-    wlan_loader \
-    wlan_cu \
-    dhcpcd.conf
+    setup_fs
 
 # OpenSSH
 PRODUCT_PACKAGES += \
@@ -319,18 +315,6 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/usr/zi/Tagalog/Zi8DatTLs.z8d:system/usr/zi/Tagalog/Zi8DatTLs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Turkish/Zi8DatTRs.z8d:system/usr/zi/Turkish/Zi8DatTRs.z8d \
     device/semc/msm7x27-common/prebuilt/usr/zi/Ukrainian/Zi8DatUKs.z8d:system/usr/zi/Ukrainian/Zi8DatUKs.z8d
-
-# Wifi and hotspot
-PRODUCT_COPY_FILES += \
-    device/semc/msm7x27-common/prebuilt/bin/dhcpcd:system/bin/dhcpcd \
-    device/semc/msm7x27-common/prebuilt/bin/tiap_loader.sh:system/bin/tiap_loader.sh \
-    device/semc/msm7x27-common/prebuilt/bin/tiwlan_loader:system/bin/tiwlan_loader \
-    device/semc/msm7x27-common/prebuilt/etc/init.d/10dnsconf:system/etc/init.d/10dnsconf \
-    device/semc/msm7x27-common/prebuilt/etc/init.d/10hostapconf:system/etc/init.d/10hostapconf \
-    device/semc/msm7x27-common/prebuilt/etc/wifi/softap/hostapd.conf:system/etc/wifi/softap/hostapd.conf \
-    device/semc/msm7x27-common/prebuilt/etc/wifi/dnsmasq.conf:system/etc/wifi/dnsmasq.conf \
-    device/semc/msm7x27-common/prebuilt/etc/wifi/tiwlan_firmware.bin:system/etc/wifi/tiwlan_firmware.bin \
-    device/semc/msm7x27-common/prebuilt/etc/wifi/softap/tiwlan_firmware_ap.bin:system/etc/wifi/softap/tiwlan_firmware_ap.bin
 
 # A2SD and extra init files
 PRODUCT_COPY_FILES += \
