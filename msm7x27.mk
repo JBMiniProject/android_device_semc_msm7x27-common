@@ -124,7 +124,6 @@ PRODUCT_COPY_FILES += \
 # Wifi
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
-    device/semc/msm7x27-common/prebuilt/bin/dhcpcd:system/bin/dhcpcd \
     device/semc/msm7x27-common/prebuilt/bin/wifiload:system/bin/wifiload \
     device/semc/msm7x27-common/prebuilt/etc/init.d/10dhcpcd:system/etc/init.d/10dhcpcd \
     device/semc/msm7x27-common/prebuilt/etc/firmware/wl1271-fw-multirole-roc.bin:system/etc/firmware/wl1271-fw-multirole-roc.bin 
