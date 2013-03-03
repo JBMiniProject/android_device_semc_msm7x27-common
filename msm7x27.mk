@@ -53,6 +53,15 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Wifi
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf \
+    hostapd_cli \
+    hostapd \
+    calibrator \
+    libnl \
+    iw
+
 # Extra packages
 PRODUCT_PACKAGES += \
     screencap \
@@ -111,6 +120,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/hw_config.sh:system/etc/hw_config.sh \
     system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
+
+# Wifi
+PRODUCT_COPY_FILES += \
+    device/semc/msm7x27-common/prebuilt/etc/wifi/hostapd.conf:system/etc/wifi/hostapd.conf \
+    device/semc/msm7x27-common/prebuilt/bin/dhcpcd:system/bin/dhcpcd \
+    device/semc/msm7x27-common/prebuilt/bin/wifiload:system/bin/wifiload \
+    device/semc/msm7x27-common/prebuilt/etc/init.d/10dhcpcd:system/etc/init.d/10dhcpcd \
+    device/semc/msm7x27-common/prebuilt/etc/firmware/wl1271-fw-multirole-roc.bin:system/etc/firmware/wl1271-fw-multirole-roc.bin 
+
 
 # Extra prebuilt binaries
 PRODUCT_COPY_FILES += \
