@@ -359,6 +359,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
 # SRS Audio
+ifeq($(TARGET_USES_SRS),true)
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/PlayMusic.apk:system/app/PlayMusic.apk \
     device/semc/msm7x27-common/prebuilt/app/SRSPanel.apk:system/app/SRSPanel.apk \
@@ -366,6 +367,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/SRSAudioFilter.csv:system/etc/SRSAudioFilter.csv \
     device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrsfx.so:system/lib/soundfx/libsrsfx.so \
     device/semc/msm7x27-common/prebuilt/lib/soundfx/libsrstb.so:system/lib/soundfx/libsrstb.so
+endif
 
 # OTA Update Center
 PRODUCT_COPY_FILES += \
