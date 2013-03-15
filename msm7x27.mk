@@ -217,7 +217,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/usr/keylayout/systemconnector.kl:system/usr/keylayout/systemconnector.kl
 
 # SEMC keyboard
-ifeq($(SEMC_KEYBOARD),true)
+ifeq ($(SEMC_KEYBOARD),true)
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/SuquashiInputMethod.apk:system/app/SuquashiInputMethod.apk \
     device/semc/msm7x27-common/prebuilt/etc/permissions/com.sonyericsson.suquashi.xml:system/etc/permissions/com.sonyericsson.suquashi.xml \
@@ -361,7 +361,7 @@ PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/etc/adreno_config.txt:system/etc/adreno_config.txt
 
 # SRS Audio
-ifeq($(TARGET_USES_SRS),true)
+ifeq ($(TARGET_USES_SRS),true)
 PRODUCT_COPY_FILES += \
     device/semc/msm7x27-common/prebuilt/app/PlayMusic.apk:system/app/PlayMusic.apk \
     device/semc/msm7x27-common/prebuilt/app/SRSPanel.apk:system/app/SRSPanel.apk \
