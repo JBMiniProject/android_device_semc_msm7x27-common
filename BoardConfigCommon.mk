@@ -77,8 +77,8 @@ USES_TI_MAC80211 := true
 PRODUCT_DEFAULT_WIFI_CHANNELS := 14
 
 ## USB
-BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun0/file"
+BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
 ## CFLAGS
 COMMON_GLOBAL_CFLAGS += -DTARGET_MSM7x27
